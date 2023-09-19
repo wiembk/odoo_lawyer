@@ -6,6 +6,7 @@
         <field name="arch" type="xml">
             <field name="tag_ids" position="after">
                 <field name="phase_id" context="{'default_task_ok': True}" />
+                <field name="batch_id" context="{'default_task_ok': True}" />
             </field>
         </field>
     </record>
@@ -15,6 +16,7 @@
         <field name="arch" type="xml">
             <field name="name" position="after">
                 <field name="phase_id" />
+                <field name="batch_id" />
             </field>
             <group expand="0">
                 <filter
@@ -22,6 +24,12 @@
                     name="phase_id"
                     help="Phase"
                     context="{'group_by':'phase_id'}"
+                />
+                <filter
+                    string="Batch"
+                    name="batch_id"
+                    help="Batch"
+                    context="{'group_by':'batch_id'}"
                 />
             </group>
         </field>

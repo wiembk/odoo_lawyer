@@ -30,8 +30,8 @@
         <field name="inherit_id" ref="project.view_project_kanban" />
         <field name="arch" type="xml">
             <xpath expr="//div[hasclass('o_project_kanban_main')]" position="after">
-                <field name="phase_id"/>
-                <field name="batch_id"/>
+                <field name="phase_id" style="width: 10px;"/> 
+                <field name="batch_id" style="width: 10px;"/>
             </xpath>
         </field>
     </record>
@@ -54,7 +54,7 @@
         <field name="arch" type="xml">
             <field name="user_id" position="after">
                 <field name="phase_id" />
-                <field name="batch_id" />
+                <field name="batch_id" widget="many2many_tags" />
             </field>
         </field>
     </record>

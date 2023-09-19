@@ -72,9 +72,9 @@
     </record>
     <menuitem
         name="Project Batchs"
-        id="project_category"
+        id="project_category_batch"
         parent="project.menu_project_config"
         action="action_project_batch"
-        sequence="20"
+        sequence="21"
     />
 </odoo>

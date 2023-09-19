@@ -16,6 +16,7 @@
         "views/project_project_views.xml",
         "views/project_task_views.xml",
         "security/ir.model.access.csv",
+        
     ],
    # 'application': True,
     'installable': True,
