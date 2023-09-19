@@ -14,10 +14,10 @@
                             <field name="project_ok" />
                             <label for="project_ok" />
                         </div>
-                        <div>
+                        <!-- <div>
                             <field name="task_ok" />
                             <label for="task_ok" />
-                        </div>
+                        </div> -->
                     </div>
                     <group>
                         <group>
@@ -57,11 +57,11 @@
                     string="Can be applied for projects"
                     domain="[('project_ok','=',True)]"
                 />
-                <filter
+                <!-- <filter
                     name="task_ok"
                     string="Can be applied for tasks"
                     domain="[('task_ok','=',True)]"
-                />
+                /> -->
             </search>
         </field>
     </record>

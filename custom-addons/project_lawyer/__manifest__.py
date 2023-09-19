@@ -14,7 +14,7 @@
         "views/project_phase_views.xml",
         "views/project_batch_views.xml",
         "views/project_project_views.xml",
-        "views/project_task_views.xml",
+        #"views/project_task_views.xml",
         "security/ir.model.access.csv",
         
     ],
