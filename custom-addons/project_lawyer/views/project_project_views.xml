@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="project_search" model="ir.ui.view">
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_project_filter" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="phase_id" />
+                <field name="batch_id" />
+            </field>
+            <group expand="0">
+                <filter
+                    string="phase"
+                    name="phase_id"
+                    help="phase"
+                    context="{'group_by':'phase_id'}"
+                />
+                <filter
+                    string="batch"
+                    name="batch_id"
+                    help="batch"
+                    context="{'group_by':'batch_id'}"
+                />
+            </group>
+        </field>
+    </record>
+    <record id="project_kanban_lawyer_inherit" model="ir.ui.view">
+        <field name="name">project.project.kanban.lawyer.inherit</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project_kanban" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('o_project_kanban_main')]" position="after">
+                <field name="phase_id"/>
+                <field name="batch_id"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="project_view_project_tree_inherit" model="ir.ui.view">
+        <field name="name">project.view_project.tree.inherit.lawyer</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="phase_id"/>
+                <field name="batch_id" />
+                <!-- Other fields from the parent view -->
+            </xpath>
+        </field>
+    </record>
+    <record id="project_form" model="ir.ui.view">
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project" />
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="phase_id" />
+                <field name="batch_id" />
+            </field>
+        </field>
+    </record>
+</odoo>
